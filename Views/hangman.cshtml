@@ -1,2 +1,6 @@
 <h1>Hangman!</h1>
 <p>@Model.CorrectGuessesToString()</p>
+<form action = "/guess" method="post">
+<input type="hidden" id="game" name="game" value='@Model.GetWordToGuess()'>
+<button type="submit">Make a Guess</button>
+</form>

@@ -1,0 +1,6 @@
+<form action = "/attempt_guess" method="post">
+<label for="guess">Enter your guess here</label>
+<input type="text" id="guess" name="guess" required>
+<input type="hidden" id="game" name="game" value='@Model.GetWordToGuess()'>
+<button type="submit">Attempt Guess</button>
+</form>

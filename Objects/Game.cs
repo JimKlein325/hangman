@@ -39,6 +39,10 @@ namespace Hangman.Objects
       _allGames.Add(_wordToGuess,this);
     }
 
+    public static Game GetGameAtKey(string keyVal) {
+      return (_allGames[keyVal]);
+    }
+
     public static string GenerateRandomWord ()
     {
       Random rnd = new Random();
@@ -54,6 +58,10 @@ namespace Hangman.Objects
         returnString += (c + " ");
       }
       return returnString;
+    }
+
+    public string GetWordToGuess() {
+      return _wordToGuess;
     }
 
     public string IncorrectGuessesToString() {
